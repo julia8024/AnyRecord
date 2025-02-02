@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BoTabView: View {
+struct BottomTabView: View {
     private enum Tabs {
         case Record, Search
     }
@@ -16,7 +16,7 @@ struct BoTabView: View {
         let appearance = UITabBarAppearance()
         appearance.configureWithTransparentBackground()
 
-        UITabBar.appearance().backgroundColor = UIColor(Color("DefaultColor"))
+//        UITabBar.appearance().backgroundColor = UIColor(Color.background)
         UITabBar.appearance().standardAppearance = appearance
     }
 
@@ -40,12 +40,12 @@ struct BoTabView: View {
                         Text("Search")
                     })
             }
-            .accentColor(Color("DefaultTextColor"))
+            .accentColor(.primary)
         }
     }
 }
 
 
 #Preview {
-    TabView()
+    BottomTabView()
 }

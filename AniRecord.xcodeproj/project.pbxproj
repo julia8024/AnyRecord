@@ -7,20 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F21639632D4FCE03005BA9AE /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21639622D4FCE03005BA9AE /* RecordDetailView.swift */; };
+		F21639672D4FD607005BA9AE /* TobTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21639662D4FD607005BA9AE /* TobTabBar.swift */; };
 		F2C538422D4FAD2C00F2A118 /* AniRecordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C538412D4FAD2C00F2A118 /* AniRecordApp.swift */; };
 		F2C538442D4FAD2C00F2A118 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C538432D4FAD2C00F2A118 /* ContentView.swift */; };
 		F2C538462D4FAD2C00F2A118 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C538452D4FAD2C00F2A118 /* Record.swift */; };
 		F2C538482D4FAD2E00F2A118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C538472D4FAD2E00F2A118 /* Assets.xcassets */; };
 		F2C5384B2D4FAD2E00F2A118 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C5384A2D4FAD2E00F2A118 /* Preview Assets.xcassets */; };
+		F2C538522D4FBD7C00F2A118 /* BottomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C538512D4FBD7C00F2A118 /* BottomTabView.swift */; };
+		F2C538542D4FBE3200F2A118 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C538532D4FBE3200F2A118 /* RecordView.swift */; };
+		F2C538572D4FBE9A00F2A118 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C538562D4FBE9A00F2A118 /* SearchView.swift */; };
+		F2C5385A2D4FC4E500F2A118 /* RecordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C538592D4FC4E500F2A118 /* RecordListView.swift */; };
+		F2C5385D2D4FC57200F2A118 /* RecordListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C5385C2D4FC57200F2A118 /* RecordListItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F21639622D4FCE03005BA9AE /* RecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailView.swift; sourceTree = "<group>"; };
+		F21639662D4FD607005BA9AE /* TobTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TobTabBar.swift; sourceTree = "<group>"; };
 		F2C5383E2D4FAD2C00F2A118 /* AniRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AniRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C538412D4FAD2C00F2A118 /* AniRecordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniRecordApp.swift; sourceTree = "<group>"; };
 		F2C538432D4FAD2C00F2A118 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F2C538452D4FAD2C00F2A118 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		F2C538472D4FAD2E00F2A118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2C5384A2D4FAD2E00F2A118 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F2C538512D4FBD7C00F2A118 /* BottomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabView.swift; sourceTree = "<group>"; };
+		F2C538532D4FBE3200F2A118 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		F2C538562D4FBE9A00F2A118 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		F2C538592D4FC4E500F2A118 /* RecordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListView.swift; sourceTree = "<group>"; };
+		F2C5385C2D4FC57200F2A118 /* RecordListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordListItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +67,10 @@
 		F2C538402D4FAD2C00F2A118 /* AniRecord */ = {
 			isa = PBXGroup;
 			children = (
+				F2C538552D4FBE7F00F2A118 /* View */,
 				F2C538412D4FAD2C00F2A118 /* AniRecordApp.swift */,
 				F2C538432D4FAD2C00F2A118 /* ContentView.swift */,
-				F2C538452D4FAD2C00F2A118 /* Record.swift */,
+				F2C5385B2D4FC52B00F2A118 /* Data */,
 				F2C538472D4FAD2E00F2A118 /* Assets.xcassets */,
 				F2C538492D4FAD2E00F2A118 /* Preview Content */,
 			);
@@ -68,6 +83,36 @@
 				F2C5384A2D4FAD2E00F2A118 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F2C538552D4FBE7F00F2A118 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2C538582D4FC46900F2A118 /* Components */,
+				F2C538512D4FBD7C00F2A118 /* BottomTabView.swift */,
+				F2C538532D4FBE3200F2A118 /* RecordView.swift */,
+				F2C538562D4FBE9A00F2A118 /* SearchView.swift */,
+				F21639622D4FCE03005BA9AE /* RecordDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2C538582D4FC46900F2A118 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F2C538592D4FC4E500F2A118 /* RecordListView.swift */,
+				F2C5385C2D4FC57200F2A118 /* RecordListItemView.swift */,
+				F21639662D4FD607005BA9AE /* TobTabBar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F2C5385B2D4FC52B00F2A118 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F2C538452D4FAD2C00F2A118 /* Record.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +189,10 @@
 				F2C5385D2D4FC57200F2A118 /* RecordListItemView.swift in Sources */,
 				F2C538442D4FAD2C00F2A118 /* ContentView.swift in Sources */,
 				F2C538462D4FAD2C00F2A118 /* Record.swift in Sources */,
+				F2C538522D4FBD7C00F2A118 /* BottomTabView.swift in Sources */,
+				F2C538542D4FBE3200F2A118 /* RecordView.swift in Sources */,
+				F21639632D4FCE03005BA9AE /* RecordDetailView.swift in Sources */,
+				F2C538572D4FBE9A00F2A118 /* SearchView.swift in Sources */,
 				F2C538422D4FAD2C00F2A118 /* AniRecordApp.swift in Sources */,
 				F2C5385A2D4FC4E500F2A118 /* RecordListView.swift in Sources */,
 			);
