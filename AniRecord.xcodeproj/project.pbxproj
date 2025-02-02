@@ -140,9 +140,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21639672D4FD607005BA9AE /* TobTabBar.swift in Sources */,
+				F2C5385D2D4FC57200F2A118 /* RecordListItemView.swift in Sources */,
 				F2C538442D4FAD2C00F2A118 /* ContentView.swift in Sources */,
 				F2C538462D4FAD2C00F2A118 /* Record.swift in Sources */,
 				F2C538422D4FAD2C00F2A118 /* AniRecordApp.swift in Sources */,
+				F2C5385A2D4FC4E500F2A118 /* RecordListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
