@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F2C538422D4FAD2C00F2A118 /* AniRecordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C538412D4FAD2C00F2A118 /* AniRecordApp.swift */; };
 		F2C538442D4FAD2C00F2A118 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C538432D4FAD2C00F2A118 /* ContentView.swift */; };
-		F2C538462D4FAD2C00F2A118 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C538452D4FAD2C00F2A118 /* Item.swift */; };
+		F2C538462D4FAD2C00F2A118 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C538452D4FAD2C00F2A118 /* Record.swift */; };
 		F2C538482D4FAD2E00F2A118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C538472D4FAD2E00F2A118 /* Assets.xcassets */; };
 		F2C5384B2D4FAD2E00F2A118 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C5384A2D4FAD2E00F2A118 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -18,7 +18,7 @@
 		F2C5383E2D4FAD2C00F2A118 /* AniRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AniRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C538412D4FAD2C00F2A118 /* AniRecordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniRecordApp.swift; sourceTree = "<group>"; };
 		F2C538432D4FAD2C00F2A118 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F2C538452D4FAD2C00F2A118 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F2C538452D4FAD2C00F2A118 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		F2C538472D4FAD2E00F2A118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2C5384A2D4FAD2E00F2A118 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,7 +55,7 @@
 			children = (
 				F2C538412D4FAD2C00F2A118 /* AniRecordApp.swift */,
 				F2C538432D4FAD2C00F2A118 /* ContentView.swift */,
-				F2C538452D4FAD2C00F2A118 /* Item.swift */,
+				F2C538452D4FAD2C00F2A118 /* Record.swift */,
 				F2C538472D4FAD2E00F2A118 /* Assets.xcassets */,
 				F2C538492D4FAD2E00F2A118 /* Preview Content */,
 			);
@@ -141,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2C538442D4FAD2C00F2A118 /* ContentView.swift in Sources */,
-				F2C538462D4FAD2C00F2A118 /* Item.swift in Sources */,
+				F2C538462D4FAD2C00F2A118 /* Record.swift in Sources */,
 				F2C538422D4FAD2C00F2A118 /* AniRecordApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,26 +10,26 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @Query private var records: [Record]
 
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { item in
+                ForEach(records) { record in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        Text("Item at \(record.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        Text(record.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
                     }
                 }
-                .onDelete(perform: deleteItems)
+                .onDelete(perform: deleteRecords)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
+                    Button(action: addRecord) {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
@@ -39,17 +39,17 @@ struct ContentView: View {
         }
     }
 
-    private func addItem() {
+    private func addRecord() {
         withAnimation {
-            let newItem = Item(timestamp: Date())
+            let newItem = Record(timestamp: Date())
             modelContext.insert(newItem)
         }
     }
 
-    private func deleteItems(offsets: IndexSet) {
+    private func deleteRecords(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
-                modelContext.delete(items[index])
+                modelContext.delete(records[index])
             }
         }
     }
@@ -57,5 +57,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: Record.self, inMemory: true)
 }
