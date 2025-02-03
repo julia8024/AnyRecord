@@ -12,7 +12,6 @@ struct RecordAddView: View {
     @Environment(\.modelContext) private var modelContext
 
     @State private var title: String = ""
-    @State private var synopsis: String = ""
     @State private var memo: String = ""
     @State private var releaseYear: Int? = nil
     @State private var releaseQuarter: Int? = nil
@@ -57,33 +56,28 @@ struct RecordAddView: View {
                                     Text("\(String(year))").tag(year)
                                 }
                             }
-                            .pickerStyle(MenuPickerStyle())
+                            .pickerStyle(WheelPickerStyle())
                             
                             Text("년")
                                 .font(.body)
-                        }
-                        
-                        Picker("연재 분기", selection: Binding(
-                            get: { releaseQuarter ?? 0 },
-                            set: { releaseQuarter = $0 == 0 ? nil : $0 }
-                        )) {
-                            ForEach(quarters, id: \.self) { quarter in
-                                Text("\(quarter)분기").tag(quarter)
+                            
+                            
+                            Picker("연재 분기", selection: Binding(
+                                get: { releaseQuarter ?? 0 },
+                                set: { releaseQuarter = $0 }
+                            )) {
+                                ForEach(quarters, id: \.self) { quarter in
+                                    Text("\(quarter)").tag(quarter)
+                                }
                             }
-                            Text("선택안함").tag(0)
+                            .pickerStyle(WheelPickerStyle())
+                            
+                            Text("분기")
+                                .font(.body)
                         }
-                        .pickerStyle(SegmentedPickerStyle())
                     }
 
                     CheckBox(isChecked: $hasNextSeason, text: "다음 시즌 제작 확정")
-
-                    // 줄거리 입력
-                    Text("줄거리")
-                        .font(.headline)
-                    TextEditor(text: $synopsis)
-                        .frame(minHeight: 80)
-                        .padding(8)
-                        .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray.opacity(0.5)))
                     
                     // 메모 입력
                     Text("메모")
@@ -127,7 +121,6 @@ struct RecordAddView: View {
             releaseQuarter: releaseQuarter,
             hasNextSeason: hasNextSeason,
             title: title.isEmpty ? "제목 없음" : title,
-            synopsis: synopsis,
             memo: memo,
             isWatched: false
         )
