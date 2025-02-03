@@ -14,20 +14,23 @@ struct RecordListItemView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                VStack(alignment: .leading, spacing: 6) {
-                    Text("\(record.releaseYear)년 \(record.releaseQuarter)분기")
-                        .font(.system(size: 14))
-                        .foregroundStyle(.secondary)
+            NavigationLink(destination: RecordDetailView()) {
+                HStack {
+                    VStack(alignment: .leading, spacing: 6) {
+                        if (record.releaseYear != nil && record.releaseQuarter != nil) {
+                            Text("\(String(describing: record.releaseYear))년 \(String(describing: record.releaseQuarter))분기")
+                                .font(.system(size: 14))
+                                .foregroundStyle(.secondary)
+                        }
+                        
+                        Text("\(record.title)")
+                            .font(.system(size: 16))
+                            .foregroundStyle(.primary)
+                            .fontWeight(.bold)
+                    }
                     
-                    Text("\(record.title)")
-                        .font(.system(size: 16))
-                        .foregroundStyle(.primary)
-                        .fontWeight(.bold)
+                    Spacer()
                 }
-                
-                Spacer()
-                
                 Button(action: {
                     record.isWatched = !record.isWatched
                     
