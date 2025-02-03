@@ -16,11 +16,9 @@ enum RecordTopTab: String, CaseIterable {
 
 struct RecordView: View {
     @Environment(\.modelContext) private var modelContext
-    let records: [Record] = [
-            Record(timestamp: Date()),
-            Record(timestamp: Date()),
-            Record(timestamp: Date())
-        ]
+    @Query var records: [Record] // SwiftData에서 불러오기
+    
+    @State private var isAddingRecord = false // 기록 추가 모달
     
     let tabOptions = RecordTopTab.allCases // Enum으로 탭 목록 설정
     @State private var selectedTab: RecordTopTab = .all
@@ -48,6 +46,20 @@ struct RecordView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color(.systemBackground))
             }
+        }
+        .overlay(
+            VStack {
+                CircleButton(icon: "plus", action: {
+                    isAddingRecord = true
+                })
+                    .padding(20)
+                }
+            
+            //오른쪽 하단에 버튼 고정
+            ,alignment: .bottomTrailing
+        )
+        .sheet(isPresented: $isAddingRecord) {
+            RecordAddView()
         }
     }
 }

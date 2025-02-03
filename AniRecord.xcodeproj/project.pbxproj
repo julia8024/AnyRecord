@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F21639632D4FCE03005BA9AE /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21639622D4FCE03005BA9AE /* RecordDetailView.swift */; };
 		F21639672D4FD607005BA9AE /* TobTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21639662D4FD607005BA9AE /* TobTabBar.swift */; };
+		F216396A2D4FDE3E005BA9AE /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21639692D4FDE3E005BA9AE /* CircleButton.swift */; };
+		F216396C2D4FE141005BA9AE /* RecordAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216396B2D4FE141005BA9AE /* RecordAddView.swift */; };
+		F21639702D506996005BA9AE /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F216396F2D506996005BA9AE /* CheckBox.swift */; };
 		F2C538422D4FAD2C00F2A118 /* AniRecordApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C538412D4FAD2C00F2A118 /* AniRecordApp.swift */; };
 		F2C538442D4FAD2C00F2A118 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C538432D4FAD2C00F2A118 /* ContentView.swift */; };
 		F2C538462D4FAD2C00F2A118 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C538452D4FAD2C00F2A118 /* Record.swift */; };
@@ -24,6 +27,9 @@
 /* Begin PBXFileReference section */
 		F21639622D4FCE03005BA9AE /* RecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailView.swift; sourceTree = "<group>"; };
 		F21639662D4FD607005BA9AE /* TobTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TobTabBar.swift; sourceTree = "<group>"; };
+		F21639692D4FDE3E005BA9AE /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		F216396B2D4FE141005BA9AE /* RecordAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordAddView.swift; sourceTree = "<group>"; };
+		F216396F2D506996005BA9AE /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		F2C5383E2D4FAD2C00F2A118 /* AniRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AniRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C538412D4FAD2C00F2A118 /* AniRecordApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniRecordApp.swift; sourceTree = "<group>"; };
 		F2C538432D4FAD2C00F2A118 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +99,7 @@
 				F2C538532D4FBE3200F2A118 /* RecordView.swift */,
 				F2C538562D4FBE9A00F2A118 /* SearchView.swift */,
 				F21639622D4FCE03005BA9AE /* RecordDetailView.swift */,
+				F216396B2D4FE141005BA9AE /* RecordAddView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,6 +110,8 @@
 				F2C538592D4FC4E500F2A118 /* RecordListView.swift */,
 				F2C5385C2D4FC57200F2A118 /* RecordListItemView.swift */,
 				F21639662D4FD607005BA9AE /* TobTabBar.swift */,
+				F21639692D4FDE3E005BA9AE /* CircleButton.swift */,
+				F216396F2D506996005BA9AE /* CheckBox.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -186,14 +195,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21639672D4FD607005BA9AE /* TobTabBar.swift in Sources */,
+				F216396C2D4FE141005BA9AE /* RecordAddView.swift in Sources */,
 				F2C5385D2D4FC57200F2A118 /* RecordListItemView.swift in Sources */,
 				F2C538442D4FAD2C00F2A118 /* ContentView.swift in Sources */,
 				F2C538462D4FAD2C00F2A118 /* Record.swift in Sources */,
 				F2C538522D4FBD7C00F2A118 /* BottomTabView.swift in Sources */,
 				F2C538542D4FBE3200F2A118 /* RecordView.swift in Sources */,
+				F216396A2D4FDE3E005BA9AE /* CircleButton.swift in Sources */,
 				F21639632D4FCE03005BA9AE /* RecordDetailView.swift in Sources */,
 				F2C538572D4FBE9A00F2A118 /* SearchView.swift in Sources */,
 				F2C538422D4FAD2C00F2A118 /* AniRecordApp.swift in Sources */,
+				F21639702D506996005BA9AE /* CheckBox.swift in Sources */,
 				F2C5385A2D4FC4E500F2A118 /* RecordListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
