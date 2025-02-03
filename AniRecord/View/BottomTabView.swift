@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BottomTabView: View {
+    @Environment(\.modelContext) private var modelContext
+    
     private enum Tabs {
         case Record, Search
     }
@@ -48,4 +50,5 @@ struct BottomTabView: View {
 
 #Preview {
     BottomTabView()
+        .modelContainer(for: Record.self, inMemory: true)
 }

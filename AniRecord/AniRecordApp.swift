@@ -25,7 +25,7 @@ struct AniRecordApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BottomTabView()
         }
         .modelContainer(sharedModelContainer)
     }
