@@ -16,9 +16,9 @@ struct RecordAddView: View {
     @State private var releaseYear: Int? = nil
     @State private var releaseQuarter: Int? = nil
     @State private var hasNextSeason: Bool = false
-    
-    @State private var isLaterInput: Bool = false // "나중에 입력" 체크 여부
 
+    @State private var isPickerPresented: Bool = false // 연재 기간 바텀시트
+    
     let currentYear = Calendar.current.component(.year, from: Date())
     let years: [Int] // 연도 리스트 (역순 정렬)
     
@@ -32,60 +32,120 @@ struct RecordAddView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack(alignment: .leading, spacing: 16) {
+                VStack(alignment: .leading, spacing: 40) {
                     
-                    // 제목 입력
-                    Text("제목")
-                        .font(.headline)
-                    TextField("제목 입력", text: $title)
-                        .textFieldStyle(.roundedBorder)
-
-                    // 연재 연도 및 분기 선택
-                    Text("연재 기간")
-                        .font(.headline)
-                    
-                    CheckBox(isChecked: $isLaterInput, text: "나중에 입력")
-                    
-                    if (isLaterInput == false) {
-                        HStack {
-                            Picker("연재 연도", selection: Binding(
-                                get: { releaseYear ?? currentYear },
-                                set: { releaseYear = $0 }
-                            )) {
-                                ForEach(years, id: \.self) { year in
-                                    Text("\(String(year))").tag(year)
-                                }
-                            }
-                            .pickerStyle(WheelPickerStyle())
-                            
-                            Text("년")
-                                .font(.body)
-                            
-                            
-                            Picker("연재 분기", selection: Binding(
-                                get: { releaseQuarter ?? 0 },
-                                set: { releaseQuarter = $0 }
-                            )) {
-                                ForEach(quarters, id: \.self) { quarter in
-                                    Text("\(quarter)").tag(quarter)
-                                }
-                            }
-                            .pickerStyle(WheelPickerStyle())
-                            
-                            Text("분기")
-                                .font(.body)
-                        }
+                    VStack(alignment: .leading, spacing: 10) {
+                        // 제목 입력
+                        Text("제목")
+                            .font(.headline)
+                        TextField("제목 입력", text: $title)
+                            .textFieldStyle(.plain)
                     }
-
-                    CheckBox(isChecked: $hasNextSeason, text: "다음 시즌 제작 확정")
                     
-                    // 메모 입력
-                    Text("메모")
-                        .font(.headline)
-                    TextEditor(text: $memo)
-                        .frame(minHeight: 80)
-                        .padding(8)
-                        .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray.opacity(0.5)))
+                    VStack(alignment: .leading, spacing: 10) {
+                        
+                        HStack {
+                            // 연재 연도 및 분기 선택
+                            Text("연재 기간")
+                                .font(.headline)
+                            
+                            Spacer()
+                            
+                            Button(action: {
+                                if (releaseYear == nil && releaseQuarter == nil) {
+                                    releaseYear = currentYear
+                                    releaseQuarter = 1
+                                }
+                                
+                                isPickerPresented.toggle()
+                            }, label: {
+                                HStack {
+                                    Text(releaseYear != nil && releaseQuarter != nil ? "\(String(releaseYear!))년 \(releaseQuarter!)분기" : "선택")
+                                    if (releaseYear != nil && releaseQuarter != nil) {
+                                        Button(action: {
+                                            releaseYear = nil
+                                            releaseQuarter = nil
+                                        }, label: {
+                                            Image(systemName: "xmark.circle")
+                                                .environment(\.symbolVariants, .none)
+                                        })
+                                    }
+                                        
+                                }
+                            })
+                            .sheet(isPresented: $isPickerPresented, content: {
+                                VStack {
+                                    // 툴바 추가
+                                    HStack {
+                                        Button("취소") {
+                                            isPickerPresented = false
+                                        }
+                                        .foregroundStyle(.blue)
+                                        
+                                        Spacer()
+                                        
+                                        Text("연재 기간 선택")
+                                            .font(.headline)
+                                        
+                                        Spacer()
+                                        
+                                        Button("완료") {
+                                            isPickerPresented = false
+                                        }
+                                        .bold()
+                                        .foregroundStyle(.blue)
+                                    }
+                                    .padding()
+                                    
+                                    HStack {
+                                        Picker("연재 연도", selection: Binding(
+                                            get: { releaseYear ?? currentYear },
+                                            set: { releaseYear = $0 }
+                                        )) {
+                                            ForEach(years, id: \.self) { year in
+                                                Text("\(String(year))").tag(year)
+                                            }
+                                        }
+                                        .pickerStyle(WheelPickerStyle())
+                                        
+                                        Text("년")
+                                            .font(.body)
+                                        
+                                        Picker("연재 분기", selection: Binding(
+                                            get: { releaseQuarter ?? 1 },
+                                            set: { releaseQuarter = $0 }
+                                        )) {
+                                            ForEach(quarters, id: \.self) { quarter in
+                                                Text("\(quarter)").tag(quarter)
+                                            }
+                                        }
+                                        .pickerStyle(WheelPickerStyle())
+                                        
+                                        Text("분기")
+                                            .font(.body)
+                                    }
+                                    .padding()
+                                    
+                                    Spacer()
+                                }
+                                .presentationDetents([.fraction(0.4)]) // 바텀시트 크기 설정
+                            }) // sheet
+                        }
+                
+                        CheckBox(isChecked: $hasNextSeason, text: "다음 시즌 제작 확정")
+                            .padding(.top, 10)
+                    }
+                
+                    VStack(alignment: .leading, spacing: 10) {
+                        // 메모 입력
+                        Text("메모")
+                            .font(.headline)
+                        
+                        TextEditor(text: $memo)
+                            .frame(minHeight: 80)
+                            .padding(8)
+                            .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray.opacity(0.5)))
+                    }
                 }
                 .padding()
             }
@@ -110,7 +170,8 @@ struct RecordAddView: View {
 
     // 새 레코드 저장 로직
     private func saveRecord() {
-        if (isLaterInput) {
+        // 하나라도 nil이면 둘다 nil로 변경
+        if (releaseYear == nil || releaseQuarter == nil) {
             releaseYear = nil
             releaseQuarter = nil
         }
