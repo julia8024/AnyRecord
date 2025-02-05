@@ -22,6 +22,7 @@ final class AnimeRecord: RecordProtocol {
     var releaseQuarter: Int? // 연재 분기
     var hasNextSeason: Bool // 다음 시즌 제작 확정 여부
     var series: [AnimeRecord] // 시리즈
+    var related: [AnimeRecord] // 비슷한 작품
     
     init(title: String,
          recordType: RecordType,
@@ -33,7 +34,8 @@ final class AnimeRecord: RecordProtocol {
          releaseYear: Int? = nil,
          releaseQuarter: Int? = nil,
          hasNextSeason: Bool = false,
-         series: [AnimeRecord] = []) {
+         series: [AnimeRecord] = [],
+         related: [AnimeRecord] = []) {
         self.title = title
         self.recordType = recordType
         self.isWatched = isWatched
@@ -45,6 +47,7 @@ final class AnimeRecord: RecordProtocol {
         self.releaseQuarter = releaseQuarter
         self.hasNextSeason = hasNextSeason
         self.series = series
+        self.related = related
     }
     
 }
