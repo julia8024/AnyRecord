@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F20203522D53DB96008E8327 /* RecordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20203512D53DB96008E8327 /* RecordProtocol.swift */; };
+		F20203542D53DBD8008E8327 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20203532D53DBD8008E8327 /* Note.swift */; };
+		F20203562D53DCB5008E8327 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20203552D53DCB5008E8327 /* Tag.swift */; };
+		F20203582D53DD31008E8327 /* RecordEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20203572D53DD31008E8327 /* RecordEnums.swift */; };
+		F202035B2D53DE0A008E8327 /* AnimeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202035A2D53DE0A008E8327 /* AnimeRecord.swift */; };
+		F202035D2D53DFE1008E8327 /* WebToonNovelRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202035C2D53DFE1008E8327 /* WebToonNovelRecord.swift */; };
+		F202035F2D53E143008E8327 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202035E2D53E143008E8327 /* Platform.swift */; };
 		F21639632D4FCE03005BA9AE /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21639622D4FCE03005BA9AE /* RecordDetailView.swift */; };
 		F21639672D4FD607005BA9AE /* TobTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21639662D4FD607005BA9AE /* TobTabBar.swift */; };
 		F216396A2D4FDE3E005BA9AE /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21639692D4FDE3E005BA9AE /* CircleButton.swift */; };
@@ -25,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F20203512D53DB96008E8327 /* RecordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordProtocol.swift; sourceTree = "<group>"; };
+		F20203532D53DBD8008E8327 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		F20203552D53DCB5008E8327 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		F20203572D53DD31008E8327 /* RecordEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordEnums.swift; sourceTree = "<group>"; };
+		F202035A2D53DE0A008E8327 /* AnimeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeRecord.swift; sourceTree = "<group>"; };
+		F202035C2D53DFE1008E8327 /* WebToonNovelRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebToonNovelRecord.swift; sourceTree = "<group>"; };
+		F202035E2D53E143008E8327 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		F21639622D4FCE03005BA9AE /* RecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailView.swift; sourceTree = "<group>"; };
 		F21639662D4FD607005BA9AE /* TobTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TobTabBar.swift; sourceTree = "<group>"; };
 		F21639692D4FDE3E005BA9AE /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
@@ -54,6 +68,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F20203592D53DDD6008E8327 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				F20203572D53DD31008E8327 /* RecordEnums.swift */,
+				F20203512D53DB96008E8327 /* RecordProtocol.swift */,
+				F202035A2D53DE0A008E8327 /* AnimeRecord.swift */,
+				F202035C2D53DFE1008E8327 /* WebToonNovelRecord.swift */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
 		F2C538352D4FAD2C00F2A118 = {
 			isa = PBXGroup;
 			children = (
@@ -76,7 +101,7 @@
 				F2C538552D4FBE7F00F2A118 /* View */,
 				F2C538412D4FAD2C00F2A118 /* AnyRecordApp.swift */,
 				F2C538432D4FAD2C00F2A118 /* ContentView.swift */,
-				F2C5385B2D4FC52B00F2A118 /* Data */,
+				F2C5385B2D4FC52B00F2A118 /* Models */,
 				F2C538472D4FAD2E00F2A118 /* Assets.xcassets */,
 				F2C538492D4FAD2E00F2A118 /* Preview Content */,
 			);
@@ -116,12 +141,16 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		F2C5385B2D4FC52B00F2A118 /* Data */ = {
+		F2C5385B2D4FC52B00F2A118 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F20203592D53DDD6008E8327 /* Record */,
 				F2C538452D4FAD2C00F2A118 /* Record.swift */,
+				F20203532D53DBD8008E8327 /* Note.swift */,
+				F20203552D53DCB5008E8327 /* Tag.swift */,
+				F202035E2D53E143008E8327 /* Platform.swift */,
 			);
-			path = Data;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,15 +223,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F20203562D53DCB5008E8327 /* Tag.swift in Sources */,
+				F202035B2D53DE0A008E8327 /* AnimeRecord.swift in Sources */,
 				F21639672D4FD607005BA9AE /* TobTabBar.swift in Sources */,
 				F216396C2D4FE141005BA9AE /* RecordAddView.swift in Sources */,
 				F2C5385D2D4FC57200F2A118 /* RecordListItemView.swift in Sources */,
 				F2C538442D4FAD2C00F2A118 /* ContentView.swift in Sources */,
+				F202035D2D53DFE1008E8327 /* WebToonNovelRecord.swift in Sources */,
+				F20203522D53DB96008E8327 /* RecordProtocol.swift in Sources */,
+				F20203542D53DBD8008E8327 /* Note.swift in Sources */,
 				F2C538462D4FAD2C00F2A118 /* Record.swift in Sources */,
+				F202035F2D53E143008E8327 /* Platform.swift in Sources */,
 				F2C538522D4FBD7C00F2A118 /* BottomTabView.swift in Sources */,
 				F2C538542D4FBE3200F2A118 /* RecordView.swift in Sources */,
 				F216396A2D4FDE3E005BA9AE /* CircleButton.swift in Sources */,
 				F21639632D4FCE03005BA9AE /* RecordDetailView.swift in Sources */,
+				F20203582D53DD31008E8327 /* RecordEnums.swift in Sources */,
 				F2C538572D4FBE9A00F2A118 /* SearchView.swift in Sources */,
 				F2C538422D4FAD2C00F2A118 /* AnyRecordApp.swift in Sources */,
 				F21639702D506996005BA9AE /* CheckBox.swift in Sources */,
