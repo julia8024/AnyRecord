@@ -141,10 +141,10 @@ struct RecordAddView: View {
                         Text("메모")
                             .font(.headline)
                         
-                        TextEditor(text: $memo)
-                            .frame(minHeight: 80)
-                            .padding(8)
-                            .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray.opacity(0.5)))
+//                        TextEditor(text: $memo)
+//                            .frame(minHeight: 80)
+//                            .padding(8)
+//                            .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray.opacity(0.5)))
                     }
                 }
                 .padding()
@@ -182,7 +182,6 @@ struct RecordAddView: View {
             releaseQuarter: releaseQuarter,
             hasNextSeason: hasNextSeason,
             title: title.isEmpty ? "제목 없음" : title,
-            memo: memo,
             isWatched: false
         )
         modelContext.insert(newRecord)
